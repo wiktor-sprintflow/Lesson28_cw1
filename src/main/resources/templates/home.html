@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div style="margin: auto; width: 400px">
+
+    <a href="/?action=ALL">Wszystkie</a>
+    <a href="/?action=ALL_JPQL">Wszystkie JPQL</a>
+    <a href="/?action=ALL_SQL">Wszystkie SQL</a> <br/>
+    <a href="/?action=CONTAINS_O">Zawiera "O"</a>
+    <a href="/?action=CONTAINS_O_JPQL">Zawiera "O" JPQL</a>
+    <a href="/?action=CONTAINS_O_SQL">Zawiera "O" SQL</a> <br/>
+    <a href="/?action=DELETE_K">Usuń "K"</a>
+    <a href="/?action=DELETE_K_JPQL">Usuń "K" JPQL</a>
+    <a href="/?action=DELETE_K_SQL">Usuń "K" SQL</a> <br/>
+    <a href="/?action=ORDER">Sortuj</a>
+    <a href="/?action=ORDER_JPQL">Sortuj JPQL</a>
+    <a href="/?action=ORDER_SQL">Sortuj SQL</a> <br/>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                <!--<a th:href="'/?sort=firstName&order=' + ${order}">Imię</a>-->
+                Imię
+            </th>
+            <th>
+                <!--<a th:href="'/?sort=lastName&order=' + ${order}">Nazwisko</a>-->
+                Nazwisko
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+
+
+</body>
+</html>
