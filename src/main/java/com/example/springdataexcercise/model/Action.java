@@ -1,4 +1,4 @@
-package com.example.springdataexcercise;
+package com.example.springdataexcercise.model;
 
 public enum Action {
 

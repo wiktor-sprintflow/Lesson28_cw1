@@ -1,5 +1,8 @@
-package com.example.springdataexcercise;
+package com.example.springdataexcercise.controller;
 
+import com.example.springdataexcercise.model.Action;
+import com.example.springdataexcercise.model.User;
+import com.example.springdataexcercise.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -57,7 +60,7 @@ public class UserController {
                 users = userRepository.findAll();
                 break;
             case ORDER:
-                users =  userRepository.findUsersByLastNameOrderByLastNameDesc();
+                users =  userRepository.findByOrderByLastNameDesc();
                 break;
             case ORDER_JPQL:
                 users = userRepository.jpqlFindUsersByLastNameOrderByLastNameDesc();

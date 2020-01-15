@@ -1,4 +1,4 @@
-package com.example.springdataexcercise;
+package com.example.springdataexcercise.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
